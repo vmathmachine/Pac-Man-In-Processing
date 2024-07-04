@@ -141,6 +141,7 @@ void keyPressed() {
     case '\\': game.maze.invincible^=true; break;
     case '\t': game.rackTest^=true; break;
     case '.':
+      if(game.player1==null) { break; }
       if(game.maze.getItem(game.player1.tile) == Item.NONE) { game.maze.dotsLeft++; } //if there wasn't already an item here, increment dots left
       game.maze.setItem(game.player1.tile, Item.ENERGIZER);                           //set item to energizer pellet
     break;
