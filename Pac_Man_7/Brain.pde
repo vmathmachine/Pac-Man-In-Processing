@@ -78,7 +78,8 @@ public static class Brain { //the Brain (AKA Artificial Intelligence) of the Act
   static HashMap<String, TargetFinder> base_exit_1 = new HashMap<String, TargetFinder>() {{ //first step of exiting the base
     put( "Inky", targetTowardsFixedTile(new IVector(31,16))); // Inky just goes right
     put("Clyde", targetTowardsFixedTile(new IVector( 0,16))); //Clyde just goes left
-  }};                                                         //Blinky & Pinky skip phase 1
+    put("Pinky", targetTowardsFixedTile(new IVector(16,16))); //Blink & Pinky skip phase 1. However, as of right now, Pinky doesn't always get the memo, so to stop crashes, I'm putting this here
+  }};
   
   static TargetFinder base_entrance = targetTowardsFixedTile(new IVector(15,11)); //with this, we just target straight for the base entrance (usually either when eaten or in exit phase 2)
   
