@@ -342,6 +342,7 @@ public static class Choreographer { //choreographs animations during certain scr
     game.timer = 704;
     
     Game.loadActors(game.maze); game.maze.remove("Fruit");
+    game.dying = null; //make sure to clear any currently dying actor
     
     int n=5;
     for(Actor actor : game.maze) { Artist.animation.put(actor,0); actor.cDir=new IVector(-1,0); actor.nDir=new IVector(-1,0); actor.setState(State.NORMAL); actor.speedOverwrite = 0.85*1.25; n--; }
