@@ -66,7 +66,7 @@ void draw() {
   game.updateTimerAndMode(this, sounds); //update all countdown timers and game modes
   
   //animation
-  Artist.animate(game); //animate the game (don't worry, the animation function knows when to and when not to freeze the aniamtions ;) )
+  Artist.animate(game); //animate the game (don't worry, the animation function knows when to and when not to freeze the animations ;) )
   
   //if(game.maze.invincible) { text("invincible",width/2,20); }
   
